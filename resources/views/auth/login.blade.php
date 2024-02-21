@@ -25,7 +25,7 @@
                   </form>
             </div>
             <div class="col-4">
-                <table class="table table-secondary table-striped mt-2">
+                <table class="table table-secondary table-striped mt-4">
                     <thead>
                       <tr>
                         <th scope="col">Username</th>

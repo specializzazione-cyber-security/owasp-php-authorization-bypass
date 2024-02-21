@@ -23,11 +23,11 @@
                         <td>{{substr($article->title,0,40)}}...</td>
                         <td>{{substr($article->body,0,60)}}...</td>
                         <td>
-                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Leggi</a>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">Leggi</a>
                             <form class="d-inline" method="POST" action="{{route('article.delete', compact('article'))}}">
                               @method('DELETE')
                               @csrf
-                              <button type="submit" class="btn btn-danger">Elimina</button>
+                              <button type="submit" class="btn btn-outline-danger">Elimina</button>
                             </form>
                         </td>
                       </tr>
