@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class ArticleController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth')->only(['create','store','delete']);
+        $this->middleware('isAdmin')->only(['create','store','delete']);
     }
 
     public function create(){
