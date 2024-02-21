@@ -21,3 +21,6 @@ Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('das
 
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
+Route::get('/article/{article}/read', [ArticleController::class, 'show'])->name('article.show');
+Route::delete('/article/{article}/delete', [ArticleController::class, 'delete'])->name('article.delete');

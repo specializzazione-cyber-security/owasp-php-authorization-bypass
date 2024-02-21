@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class ArticleController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth')->only(['create','store']);
+        $this->middleware('auth')->only(['create','store','delete']);
     }
 
     public function create(){
@@ -24,5 +24,16 @@ class ArticleController extends Controller
         ]);
         
         return redirect(route('dashboard'))->with('message', 'Articolo creato con successo!');
+    }
+
+    public function delete(Article $article){
+        $article->delete();
+
+        return redirect(route('dashboard'))->with('message', 'Operazione effettuata con successo!');
+
+    }
+
+    public function show(Article $article){
+        return view('article.show', compact("article"));
     }
 }
