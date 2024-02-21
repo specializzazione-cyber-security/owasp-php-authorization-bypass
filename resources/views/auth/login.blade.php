@@ -24,6 +24,29 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
             </div>
+            <div class="col-4">
+                <table class="table table-secondary table-striped mt-2">
+                    <thead>
+                      <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Ruoli</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Admin</th>
+                        <td>password</td>
+                        <td>Ruolo: Amministratore</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">User</th>
+                        <td>password</td>
+                        <td>Ruolo: Utente</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
         </div>
     </div>
 </x-layout>
